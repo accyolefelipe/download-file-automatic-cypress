@@ -1,8 +1,9 @@
 name: tests
-on: [push]
+
+on:
+  workflow_dispatch:
   schedule:
-      # runs tests every day at 4am
-      - cron: '*/5 * * *'
+     - cron: '*/5 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
